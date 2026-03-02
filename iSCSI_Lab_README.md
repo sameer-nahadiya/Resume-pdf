@@ -146,14 +146,10 @@ sudo mount /dev/sdb /mnt/iscsi
 
 ## 📚 References
 
--   IETF RFC 3720
--   Open-iSCSI GitHub
--   Red Hat Blog -- iSCSI Guide
--   DigitalOcean -- Block Storage Explained
+-   IETF RFC 3720 
+-   Open-iSCSI GitHub --> (https://github.com/open-iscsi/open-iscsi.git)
+-   Red Hat Blog -- iSCSI Guide --> (https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/managing_storage_devices/configuring-an-iscsi-initiator_managing-storage-devices)
+-   DigitalOcean -- Block Storage Explained --> (https://www.digitalocean.com/resources/articles/block-storage)
 
 ------------------------------------------------------------------------
 
-## 👨‍💻 Author
-
-Ravi Kumar\
-Computer Engineering
