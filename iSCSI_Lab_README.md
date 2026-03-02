@@ -1,6 +1,6 @@
 # iSCSI Storage Lab -- Complete Implementation Guide
 
-## 📘 Overview
+## Overview
 
 This project demonstrates the complete setup and configuration of an
 iSCSI (Internet Small Computer System Interface) storage environment on
@@ -9,7 +9,7 @@ remote disk appears as a local block device.
 
 ------------------------------------------------------------------------
 
-## 🔹 What is iSCSI?
+## What is iSCSI?
 
 iSCSI is a block-level storage protocol that transmits SCSI commands
 over TCP/IP networks. Unlike file-based protocols (NFS/SMB), iSCSI
@@ -17,7 +17,7 @@ presents storage as a raw disk device.
 
 ------------------------------------------------------------------------
 
-## 🏗 Architecture Components
+## Architecture Components
 
 -   **Target** -- Storage Server
 -   **Initiator** -- Client system
@@ -27,7 +27,7 @@ presents storage as a raw disk device.
 
 ------------------------------------------------------------------------
 
-## 🖥 Lab Environment
+## Lab Environment
 
   Component   Value
   ----------- -----------
@@ -37,7 +37,7 @@ presents storage as a raw disk device.
 
 ------------------------------------------------------------------------
 
-## ⚙ Installation
+## Installation
 
 ``` bash
 sudo apt update
@@ -46,7 +46,7 @@ sudo apt install targetcli-fb open-iscsi -y
 
 ------------------------------------------------------------------------
 
-## 🧱 Target Configuration
+## Target Configuration
 
 ### Create Backstore
 
@@ -81,7 +81,7 @@ acls create iqn.2026-03.local.lab:client1
 
 ------------------------------------------------------------------------
 
-## 🔌 Initiator Configuration
+## Initiator Configuration
 
 Edit:
 
@@ -97,7 +97,7 @@ sudo systemctl restart open-iscsi
 
 ------------------------------------------------------------------------
 
-## 🔍 Discover Target
+## Discover Target
 
 ``` bash
 sudo iscsiadm -m discovery -t sendtargets -p 127.0.0.1
@@ -105,7 +105,7 @@ sudo iscsiadm -m discovery -t sendtargets -p 127.0.0.1
 
 ------------------------------------------------------------------------
 
-## 🔐 Login
+## Login
 
 ``` bash
 sudo iscsiadm -m node --login
@@ -113,7 +113,7 @@ sudo iscsiadm -m node --login
 
 ------------------------------------------------------------------------
 
-## 💾 Verify Disk
+## Verify Disk
 
 ``` bash
 lsblk
@@ -125,7 +125,7 @@ You should see:
 
 ------------------------------------------------------------------------
 
-## 📂 Perform I/O
+## Perform I/O
 
 ``` bash
 sudo mkfs.ext4 /dev/sdb
@@ -135,7 +135,7 @@ sudo mount /dev/sdb /mnt/iscsi
 
 ------------------------------------------------------------------------
 
-## 🚀 Real-World Applications
+## Real-World Applications
 
 -   Data Centers
 -   Virtualization Platforms
@@ -144,7 +144,7 @@ sudo mount /dev/sdb /mnt/iscsi
 
 ------------------------------------------------------------------------
 
-## 📚 References
+## References
 
 -   IETF RFC 3720 
 -   Open-iSCSI GitHub --> (https://github.com/open-iscsi/open-iscsi.git)
